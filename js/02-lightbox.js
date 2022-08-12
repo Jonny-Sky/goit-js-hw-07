@@ -17,10 +17,14 @@ function markupRender(galleryItems) {
     })
     .join("");
 }
+
 containerEl.insertAdjacentHTML("beforeend", markupRender(galleryItems));
-// containerEl.addEventListener("click", selectPicture);
-new SimpleLightbox(".some-element a", {
-  /* options */
+
+let gallery = new SimpleLightbox(".gallery a");
+gallery.on("show.simplelightbox", function () {
+  captionsData = alt;
 });
+// function chendgAtreb =
+// var lightbox = new SimpleLightbox(".gallery a", {});
 console.log(galleryItems);
 console.log(markupRender);
